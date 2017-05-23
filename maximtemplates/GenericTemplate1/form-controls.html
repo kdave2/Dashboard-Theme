@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxim Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap-combobox.css">
+    <!--<link rel="stylesheet" href="../../dist/css/datepicker.css">-->
+  
+    <!-- Custom styles for this template -->    
+    <link href="custom.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link rel="stylesheet" href="../css/jquery-ui-themes-1.11.4/themes/smoothness/jquery-ui.css">	
+    <!-- Javascript -->
+    
+     
+    <!--working<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/ui/jquery-ui.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript"> 
+    $(function(){
+      $("#maximheader").load("header.html"); 
+      $("#maximfooter").load("footer.html"); 
+    });
+
+ 
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  
+        $(function () {
+          $("#timepicker").timepicker({
+              timeFormat: "hh:mm tt"
+          });
+      });
+
+
+
+    </script> 
+
+  
+  </head>
+  <body>
+
+<div id="maximheader"></div>
+
+<div class="span12"> </div>
+<div class="span12"></div>
+<div class="col-xs-12 col-sm-8 col-md-10 col-lg-6" style="">
+
+<div class="col-xs-1 col-sm-1 col-md-3 col-lg-3" style="">
+</div>
+<div class="col-xs-11 col-sm-11 col-md-8 col-lg-7" style="">
+<form id="registrationForm" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Name</label>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            <input type="text" class="form-control" name="name" placeholder="Your name" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Skill-Set</label>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            <textarea name="skillset" class="form-control" rows="3" placeholder="Enter your Skill-set" ></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Salary</label>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            <!--<div class="input-group">-->
+                <input type="text" class="form-control" name="salary" placeholder="salary" />
+                 <!--<span class="input-group-addon">$</span>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Designation</label>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            <select class="form-control" name="designation">
+                <option value="">Choose your designation</option>
+                <option value="engineer1">IT Engineer-1</option>
+                <option value="engineer2">IT Engineer-2</option>
+                <option value="senior">Sr. Engineer</option>
+                <option value="mts">MTS</option>
+                <option value="manager">IT Manager</option>
+            </select>
+        </div>
+    </div>
+
+     <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Gender</label>
+        <div class="col-xs-12 col-sm-12  col-md-7 col-lg-8" >
+          <div class="radio-inline">
+             <input type="radio" name="rdOption">Male      
+          </div>
+          <div class="radio-inline">
+            <input type="radio" name="rdOption">Female
+          </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Checkbox</label>
+        <div class="col-xs-12 col-sm-12  col-md-7 col-lg-8" >
+          <div class="checkbox">
+             <label><input type="checkbox">Option 1</label>      
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox">Option 2</label>      
+          </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-9 col-sm-8 col-md-4 col-lg-3 label" >Birth Date</label>
+        <div class="col-xs-12 col-sm-12  col-md-7 col-lg-8">
+            <!--<div class="input-group date" >-->
+               <!-- <input type="date" class="form-control" name="birthdate"  />--> <!-- can use this with chrome-->
+                <!--<input type='text' class="form-control" id='datetimepicker1' />-->
+                <input type="text" id="datepicker">
+                <!--<span class="input-group-addon">
+                   <span class="glyphicon glyphicon-calendar"></span>
+                </span>-->
+            <!--</div>-->			
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-xs-12 col-sm-12" >
+            <button type="submit" class="btn btn-primary">Register</button>
+             <button class="btn btn-primary">Cancel</button>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+<div id="maximfooter"></div>
+
+
+    
+  </body>
+</html>
+

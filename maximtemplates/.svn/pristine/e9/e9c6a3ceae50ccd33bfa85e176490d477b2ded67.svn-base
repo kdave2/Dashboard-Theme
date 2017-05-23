@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxim Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="custom.css" rel="stylesheet">
+     <script src="../js/jquery-1.11.1.min.js"></script> 
+	 <script src="../js/reorderFunction.js"></script> 
+	  <script src="../js/bootstrap.min.js"></script>
+    <script> 
+    $(function(){
+      $("#maximheader").load("header.html"); 
+      //$("#maximfooter").load("footer.html"); 
+    });
+    </script> 
+<style>
+.span12{
+width: 100%;
+display: block;
+float: left;
+min-height: 30px;
+}
+.formheading{
+	color: #01B2AA;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+margin-left: 20px;
+  text-decoration: underline;
+}
+</style>
+  
+  </head>
+  <body>
+
+<div id="maximheader"></div>
+
+
+<div class="container-fluid">
+<div class="row">
+	<div class="span12"></div>
+    <div class="col-xs-12 col-sm-8 col-md-5 col-lg-5" style=" display: table;table-layout: fixed;border:2px solid #ededed;">
+        <form  id="preferenceForm"  class="preferenceForm" action="savePreference">
+			 		<div class="formheading" style="font-size: 15px;margin:0px">
+						List control for selection and set ordering
+					</div>
+					<div  class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="min-height:230px;">
+					<span style="color: #01B2AA;display:block">Available Areas</span>
+				 		
+				 		<select size="10" id="allAreaSelected" name="allAreaSelected" multiple="multiple" style="min-width:100px;">
+							<option value="AVI">AVI</option>
+							<option value="BACKGRIND">BACKGRIND</option>
+							<option value="BALLPLACE">BALLPLACE</option>
+							<option value="CURE">CURE</option>
+							<option value="DIFFUSION">DIFFUSION</option>
+							<option value="EPOXY">EPOXY</option>
+							<option value="INSPECT">INSPECT</option>
+							<option value="LASER">LASER</option>
+							<option value="METAL">METAL</option>
+							<option value="METROLOGY">METROLOGY</option>
+							<option value="MITTEST">MITTEST</option>
+							<option value="PC">PC</option>
+							<option value="PHOTO">PHOTO</option>
+							<option value="PLASMA">PLASMA</option>
+							<option value="PLATING">PLATING</option>
+							<option value="SCRAP">SCRAP</option>
+							<option value="TNR">TNR</option>
+							<option value="WETLINE">WETLINE</option>
+						</select>
+					</div>
+					<div  class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="min-height:230px;">
+						<div style="padding-top:30px">
+							<button id="toRightAll" class="btn btn-primary btn-sm btn-block" style="  min-width: 55px;" onclick="listbox_moveacrossAll('allAreaSelected','areaSelected'); return false;">&gt;&gt;</button>
+							<button id="toRight" class="btn btn-primary btn-sm btn-block" style="  min-width: 55px;" onclick="listbox_moveacross('allAreaSelected','areaSelected'); return false;">&gt;</button>
+							<button id="toLeft" class="btn btn-primary btn-sm btn-block" style="  min-width: 55px;" onclick="listbox_moveacross('areaSelected','allAreaSelected'); return false;">&lt;</button>
+							<button id="toLeftAll" class="btn btn-primary btn-sm btn-block" style="  min-width: 55px;"  onclick="listbox_moveacrossAll('areaSelected','allAreaSelected'); return false;">&lt;&lt;</button>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="min-height:230px;">
+						<span style="color: #01B2AA;display:block">Visible Areas</span>	
+						<select size="10" id="areaSelected" name="areaSelected" multiple="multiple"  style="min-width:100px">
+						</select>
+					</div>
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="min-height:230px;">
+						<div style="padding-top:30px">
+							<button id="First" class="btn btn-sm btn-primary btn-block" style=" min-width: 70px;" onclick="moveFirst('areaSelected'); return false;">First</button>
+							<button id="Up" class="btn btn-sm btn-primary btn-block" style="  min-width: 70px;"  onclick="moveUp('areaSelected'); return false;">Up</button>
+							<button id="Down" class="btn btn-sm btn-primary btn-block" style="  min-width: 70px;"  onclick="moveDown('areaSelected'); return false;">Down</button>
+							<button id="Last" class="btn btn-sm btn-primary btn-block" style="  min-width: 70px;"  onclick="moveLast('areaSelected'); return false;">Last</button>
+						</div>
+					</div>					
+				<div style="width:100%;clear:both;text-align: center;">
+						<input id="savePreferenceButton" class="btn btn-sm btn-primary" type="button" value="Save" style="display:inline;max-width: 90px;" title="Save Your Preferences" />
+						<input id="cancelPreferenceButton" type="button" style="display:inline;  max-width: 90px;" class="btn btn-sm btn-primary" value="Cancel"/>
+				</div>
+			  </form>     
+    </div>
+</div>
+  
+</div>
+<!--<div id="maximfooter"></div>-->
+  
+
+    
+  </body>
+</html>
+
+  

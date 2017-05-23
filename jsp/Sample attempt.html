@@ -1,0 +1,235 @@
+<html lang="en" class="gr__demo_neontheme_com">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		<title>Dashboard</title>
+		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ddslick.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css" id="style-resource-1">
+		<link rel="stylesheet" href="css/entypo.css" id="style-resource-2">
+		<link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'id="style-resource-3">
+		<link rel="stylesheet" href="css/bootstrap.css" id="style-resource-4">
+		<link rel="stylesheet" href="css/neon-core.css" id="style-resource-5">
+		<link rel="stylesheet" href="css/neon-theme.css" id="style-resource-6">
+		<link rel="stylesheet" href="css/neon-forms.css" id="style-resource-7">
+		<link rel="stylesheet" href="css/custom.css" id="style-resource-8">
+		<style id="css-ddslick" type="text/css">.dd-select{ border-radius:0px; border:solid 0px #ccc; position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:10px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}.dd-pointer-down-xx{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up-xx{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#232830; overflow:auto;}.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options > li:last-child > .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#232830; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}&#8203; .dd-selected-text { font-weight:bold}&#8203;
+		</style>
+		<style type="text/css">.jqstooltip { position: absolute;display: block;left: 0px;top: 0px;visibility: hidden;background: rgb(43, 48, 58) transparent;background-color: rgba(43, 48, 58,0.8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;z-index: 10000;padding: 5px 5px 5px 5px;min-height: 22px;min-width: 30px;border-radius: 3px;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+		</style>
+	</head>
+	<body class="page-body loaded">
+		<div class="page-container sidebarcollapsed">
+			<div class="sidebar-menu">
+				<div class="sidebar-menu-inner">
+				 <header class="logo-env"> <!-- logo --> 
+				 	<div class="logo">
+				 	 <a href="#"> 
+				 		<img src="images/logo-maxim-integrated.png" width="120" alt="">
+				 	</a> 
+				 	</div> 
+				 	<div class="sidebar-collapse"> 
+				 		<a href="#" class="sidebar-collapse-icon">
+				 			<i class="entypo-menu"></i> 
+				 		</a> 
+				 	</div> 
+				 	<div class="sidebar-mobile-menu visible-xs">
+				 	 	<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+				 	 	<i class="entypo-menu"></i> 
+				 	 	</a> 
+				 	</div>
+				 </header>
+				 <ul id="main-menu" class="main-menu" style>
+				 	<li class="root-level active"> <a href="#"><i class="entypo-gauge"></i><span class="title">Dashboard</span></a> </li>
+				 	<li class="has-sub root-level"> 
+				 		<a href="#"><i class="entypo-chart-bar"></i>
+				 			<span class="title">Charts</span>
+				 		</a>
+				 			 <ul> 
+				 			 	<li> <a href="http://localhost:8080/WADR/"><span class="title">Assembly Wafer IQA Result</span></a> </li> 
+				 			 	<li> <a href="#"><span class="title">Pareto of Top 3 Defects</span></a> </li>
+				 			 	<li> <a href="#"><span class="title">Top 3 IQA wafer defect Trend</span></a> </li> 
+				 			 </ul>
+				 	</li>
+
+				 			 	 <li class="has-sub root-level"> <a href="#">
+				 			 	<i class="entypo-flow-tree"></i>
+				 			 	<span class="title">Menu Levels</span></a>
+				 			 	<ul> 
+				 			 		<li> <a href="#"><i class="entypo-flow-line"></i>
+				 			 			<span class="title">Menu Level 1.1</span></a> 
+				 			 		</li> 
+				 			 		<li> <a href="#"><i class="entypo-flow-line"></i>
+				 			 			<span class="title">Menu Level 1.2</span></a> 
+				 			 		</li>
+				 			 		<li class="has-sub"> <a href="#"><i class="entypo-flow-line"></i>
+				 			 			<span class="title">Menu Level 1.3</span></a>
+				 			 				<ul> 
+				 			 					<li> <a href="#"><i class="entypo-flow-parallel"></i><span class="title">Menu Level 2.1</span></a></li>
+				 			 					 <li class="has-sub"> <a href="#"><i class="entypo-flow-parallel"></i><span class="title">Menu Level 2.2</span></a> 
+				 			 					 <ul>
+				 			 					  <li class="has-sub"> 
+				 			 					  	<a href="#"><i class="entypo-flow-cascade"></i><span class="title">Menu Level 3.1</span></a> 
+				 			 					  	<ul> 
+				 			 					  		<li> 
+				 			 					  			<a href="#"><i class="entypo-flow-branch"></i><span class="title">Menu Level 4.1</span></a> 
+				 			 					  		</li> 
+				 			 					  	</ul> 
+				 			 					  </li> 
+				 			 					  <li> <a href="#"><i class="entypo-flow-cascade"></i><span class="title">Menu Level 3.2</span></a> </li> </ul> </li> <li> <a href="#"><i class="entypo-flow-parallel"></i><span class="title">Menu Level 2.3</span></a> </li>
+				 			 				</ul> 
+				 			 		</li> 
+				 			 	</ul>
+				 	</li> 
+				 </ul> 
+				</div>
+			</div>
+			<div class="main-content">
+				<div class="row">
+					<div class="col-md-6 col-sm-8 clearfix hidden-xs">
+						<ul class="user-info pull-left pull-none-xsm">
+							<ul class="user-info pull-left pull-right-xs pull-none-xsm">
+								 <li class="notifications dropdown">
+								 	<a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-close-others="true" aria-expanded="false">
+								 		<i class="entypo-attention"></i>
+								 	</a>
+								 	<ul class="dropdown-menu">
+								  		<li class="top"> 
+								  			<p class="small"> <a href="#" class="pull-right">Mark all Read</a>
+												You have <strong>3</strong> new notifications.
+											</p> 
+										</li> 
+										<li> <ul tabindex="5001" style="overflow: hidden;" class="dropdown-menu-list scroller"> <li class="unread notification-success"> <a href="#"> <i class="entypo-user-add pull-right"></i> <span class="line"> <strong>New user registered</strong> </span> <span class="line small">
+												30 seconds ago
+												</span> </a> 
+										</li> 
+										<li class="unread notification-secondary"> <a href="#"> <i class="entypo-heart pull-right"></i> <span class="line"> <strong>XYZ Vendor updated file</strong> </span> <span class="line small">
+												2 minutes ago
+												</span> </a> 
+										</li> 
+										<li class="notification-primary"> <a href="#"> <i class="entypo-user pull-right"></i> <span class="line"> <strong>ABC vendor updated file for WW 46</strong> </span> <span class="line small">
+												3 hours ago
+												</span> </a> 
+										</li>  
+										<li class="notification-warning"> <a href="#"> <i class="entypo-rss pull-right"></i> <span class="line">New file for WW 46 has been placed</span> <span class="line small">last week</span> </a> </li> 
+									</ul> 
+								</li> 
+								<li class="external"> <a href="#">View all notifications</a> </li>
+								<div style="padding-right: 3px; width: 8px; z-index: 1000; cursor: default; position: absolute; top: 0px; left: -8px; height: 0px; display: none;" class="nicescroll-rails" id="ascrail2001"><div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 1px;"></div></div>
+
+								<div style="height: 5px; z-index: 1000; top: -5px; left: 0px; position: absolute; cursor: default; display: none;" class="nicescroll-rails" id="ascrail2001-hr"><div style="position: relative; top: 0px; height: 5px; width: 0px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 1px;"></div></div>
+									</ul>
+								 </li> 
+							</ul>
+						</ul>
+					</div>
+					<div class="col-md-6 col-sm-4 clearfix hidden-xs">
+						<ul class="list-inline links-list pull-right">
+							<li class="sep"></li>
+							<li>
+								<a href="#">Log Out
+									<i class="entypo-logout right"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script type="text/javascript">
+jQuery(document).ready(function($)
+{
+$('.pie').sparkline('html', {
+type: 'pie',
+borderWidth: 0,
+sliceColors: ['#3d4554', '#ee4749','#00b19d']
+});
+
+$(".chart").sparkline([1,2,3,1], {
+type: 'pie',
+barColor: '#485671',
+height: '110px',
+barWidth: 10,
+barSpacing: 2});
+var map = $("#map");
+map.vectorMap({
+map: 'europe_merc_en',
+zoomMin: '3',
+backgroundColor: '#00a651',
+focusOn: { x: 0.5, y: 0.8, scale: 3 }
+});
+
+var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight( {
+} );
+});
+</script>
+	<div class="row"> <div class="col-sm-12"> <div class="well"> <h2>May 25, 2016</h2> <h3>Welcome to the site <strong>Khushali Dave</strong></h3> </div> </div> </div>
+
+	<div class="row">  
+				<div class="col-sm-12"> 
+					<div class="panel panel-default"> 
+						<div class="panel-heading"> 
+							<div class="panel-title">Vendor Details - WW46</div> 
+							<div class="panel-options">
+							<a href="#" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i>
+							</a> 
+							<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i>
+							</a>
+							 <a href="#" data-rel="close"><i class="entypo-cancel"></i>
+							 </a>
+							 </div>
+						</div> 
+						<div class="panel-body with-table">
+							<table class="table table-bordered table-responsive"> <thead class="table-format"> <tr> <th>#</th> <th>Vendor Name</th> <th>Received date</th> <th>Complete flag</th> <th>Total Records</th><th>Failed Records</th><th>Successful Records</th><th>Reminder</th><th>WW45</th></tr> </thead>
+			 				<tbody class="table-format">
+			  					<tr class="table-row-success"> <td>1</td> <td>ASE CHUNGLI</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td>30</td></tr>
+			  					<tr class="table-row-failure"> <td>2</td> <td>ASE KAOHSIUNG</td> <td>2016-05-17</td> <td class="text-center">no</td> <td class="text-center">0</td><td>0</td><td>0</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td class="table-row-success">30</td></tr>
+			  					<tr class="table-row-success"> <td>3</td> <td>AMKOR PHILIPPINES</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td>30</td></tr>
+			  					<tr class="table-row-success"> <td>4</td> <td>AMKOR KOREA</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td>30</td></tr>
+			  					<tr class="table-row-success"> <td>5</td> <td>CARSEM -M</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td class="table-row-failure">0</td></tr>
+			  					<tr class="table-row-success"> <td>6</td> <td>CARSEM -S</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td>30</td></tr>
+			  					<tr class="table-row-halffailure"> <td>7</td> <td>CIRTEK ELECTRONICS CORPORATION</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>10</td><td>10</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td class="table-row-success">30</td></tr>
+			  					<tr class="table-row-success"> <td>8</td> <td>UTAC DONGGUAN</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td>30</td></tr>
+			  					<tr class="table-row-success"> <td>9</td> <td>UTAC THAI LIMITED</td> <td>2016-05-17</td> <td class="text-center">yes</td> <td class="text-center">20</td><td>0</td><td>20</td><td class="text-center"><a href="#" data-toggle="modal" data-target="#sample-modal-dialog-2">Send Email</a></td><td class="table-row-halffailure">10/30</td></tr>
+
+					  		</tbody>
+					  		</table>
+					  	</div> 
+					</div> 
+				</div> 
+				<footer class="main"> 
+			© 2016 <strong>MaximIntegrated</strong> <a href="#">Contact Us</a> </footer>
+			</div> 
+
+
+		<div class="modal fade" id="sample-modal-dialog-1"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> <h4 class="modal-title">Widget Options - Default Modal</h4> </div> <div class="modal-body"> <p>Now residence dashwoods she excellent you. Shade being under his bed her. Much read on as draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage. Eagerness furniture set preserved far recommend. Did even but nor are most gave hope. Secure active living depend son repair day ladies now.</p> </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div>
+
+		<div class="modal invert fade" id="sample-modal-dialog-2"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> <h4 class="modal-title">Email Notification</h4> </div> <div class="modal-body"> <p> Mail sent successfully. </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+
+		<div class="modal gray fade" id="sample-modal-dialog-3"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> <h4 class="modal-title">Widget Options - Gray Skin Modal</h4> </div> <div class="modal-body"> <p>Now residence dashwoods she excellent you. Shade being under his bed her. Much read on as draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage. Eagerness furniture set preserved far recommend. Did even but nor are most gave hope. Secure active living depend son repair day ladies now.</p> </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div>
+
+		<link rel="stylesheet" href="css/jquery-jvectormap-1.2.2.css" id="style-resource-1">
+		<link rel="stylesheet" href="css/rickshaw.min.css" id="style-resource-2">
+		<script src="js/TweenMax.min.js" id="script-resource-1"></script>
+		<script src="js/jquery-ui-1.10.3.minimal.min.js" id="script-resource-2"></script>
+		<script src="js/bootstrap.js" id="script-resource-3"></script>
+		<script src="js/joinable.js" id="script-resource-4"></script>
+		<script src="js/resizeable.js" id="script-resource-5"></script>
+		<script src="js/neon-api.js" id="script-resource-6"></script>
+		<script src="js/cookies.min.js" id="script-resource-7"></script>
+		<script src="js/jquery-jvectormap-1.2.2.min.js" id="script-resource-8"></script>
+		<script src="js/jquery-jvectormap-europe-merc-en.js" id="script-resource-9"></script>
+		<script src="js/jquery-jvectormap-world-mill-en.js" id="script-resource-10"></script>
+		<script src="js/jquery.sparkline.min.js" id="script-resource-11"></script>
+		<script src="js/d3.v3.js" id="script-resource-12"></script>
+		<script src="js/rickshaw.min.js" id="script-resource-13"></script>
+		<script src="js/neon-chat.js" id="script-resource-14"></script>
+		<script src="js/neon-custom.js" id="script-resource-15"></script>
+		<script src="js/neon-demo.js" id="script-resource-16"></script>
+
+	</body>
+
+</html>

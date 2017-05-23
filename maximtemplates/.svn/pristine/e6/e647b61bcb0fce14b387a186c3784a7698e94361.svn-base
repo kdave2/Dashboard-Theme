@@ -1,0 +1,13 @@
+
+ <!--<link href="../css/bootstrap.min.css" rel="stylesheet">
+  Custom styles for this template -->
+ <link href="../css/custom.css" rel="stylesheet">
+ 
+ <footer class="footer">
+      <div class="container">
+        <hr>
+          <div align="center">&copy; Maxim Integrated       
+            <a href="mailto:xyz@maximintegrated.com">Contact us</a>
+        </div>
+    </div>
+</footer>

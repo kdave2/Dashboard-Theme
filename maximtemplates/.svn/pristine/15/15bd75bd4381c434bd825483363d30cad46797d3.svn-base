@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxim Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap-combobox.css">
+    <!--<link rel="stylesheet" href="../../dist/css/datepicker.css">-->
+  
+    <!-- Custom styles for this template -->    
+    <link href="custom.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link rel="stylesheet" href="../css/jquery-ui-themes-1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- Javascript -->
+	
+	
+	<!--FOR HIDING THE ICONS IN THE JSTREE, UNCOMMENT THE BELOW CSS
+    <!--<style type="text/css">
+		.jstree li > a > .jstree-icon {  display:none !important; } 
+	</style>-->
+     
+    
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/ui/jquery-ui.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <script src="../js/json2.min.js"></script>
+    <script src="../js/jquery.jstree.js"></script>
+	<script  src="../js/jquery.clearsearch.js" charset="utf-8">  </script>
+
+    <script type="text/javascript"> 
+    $(function(){
+      $("#maximheader").load("header.html"); 
+      $("#maximfooter").load("footer.html"); 
+    });
+
+  
+
+  $(function () {
+           $("#demo1").jstree({
+               "plugins": ["themes", "html_data", 'checkbox', "types", "ui", "crrm","dnd","contextmenu","search"]
+           })
+       .bind("select_node.jstree", function (e, data) {
+           var CurrObj = data.rslt.obj;
+           //Toggle on the click of that Node's name
+           $("#demo1").jstree("toggle_node", data.rslt.obj);
+       })
+       .bind("hover_node.jstree", function (e, data) {
+           //on hover
+           var nodeId = data.rslt.obj[0].id;
+       })
+       .bind("loaded.jstree", function (event, data) {
+           $(this).jstree("close_all");           
+       });
+	  /*Added on 08-Sep-2015 for adding search functionality to jstree*/ 
+	  /* ************************************************** */
+	  var to = false;
+	  $('#txtSearch').keyup(function () {
+		  if (to) { clearTimeout(to); }
+		  to = setTimeout(function () {
+			  //var v = $('#txtSearch').val();
+			  //$('#demo1').jstree(true).search(v);
+			  $("#demo1").jstree("search", document.getElementById('txtSearch').value);
+			  
+		  }, 250);
+		  
+		  if (document.getElementById('txtSearch').value == "") {
+			  $("#demo1").jstree("close_all");
+		  }
+	  });
+	  /* ************************************************** */
+       });
+	   /* ************************************************** */
+	   /*Added on 08-Sep-2015 for expand and collapse functionality in jstree*/ 
+		$(function () {
+			$("#OpenAllNode").click(function () {
+				$("#demo1").jstree("open_all");
+			});
+			$("#CloseAllNode").click(function () {
+				$("#demo1").jstree("close_all");
+			});
+		});
+		/* ************************************************** */
+		/*Added on 08-Sep-2015 for adding close button inside the search textbox to clear the text searched and collapse the tree*/ 
+		$(function () {
+			$('.clearable').clearSearch({ callback: function () { $("#demo1").jstree("close_all"); } });
+		});
+		/* ************************************************** */
+		/*Added on 08-Sep-2015 for skipping the submit of search textbox (as we are searching on keyup events)*/ 
+		$(function () {
+			$("input.noSubmit").keypress(function (e) {
+				var k = e.keyCode || e.which;
+				if (k == 13) {
+					e.preventDefault();
+				}
+			});
+		});
+		/* ************************************************** */
+    </script> 
+
+  
+  </head>
+  <body>
+
+<div id="maximheader"></div>
+
+<div class="span12"> </div>
+
+	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
+	  <br />
+          <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 " style="border-right: 1px solid #cccccc; margin-top: 0px; padding-top: 0px;  overflow:auto;resize: horizontal;max-width: 750px;">                           
+				<div style="padding-bottom: 12px;">
+					<button type="button" id="OpenAllNode" class="btn btn-primary">Expand All</button>
+					<button type="button" id="CloseAllNode" class="btn btn-primary">Collapse All</button>                 
+				</div>
+				<div style="padding-bottom: 12px;">
+					<input type="text" id="txtSearch" class="clearable form-control noSubmit " placeholder="Search" style="width: 80%;" />                  
+				</div>
+				<form id="registrationForm" method="post" class="form-horizontal">
+				<div id="demo1" style="height:900px;">
+					<ul >
+						<li><a>Categories</a>
+							<ul>
+								<li><a>Category 1</a>
+									<ul>
+										<li><a>Product A</a></li>
+										<li><a>Product B</a></li>
+										<li><a>Product C</a></li>
+									</ul>
+								</li>
+								<li><a>Category 2</a>
+									<ul>
+										<li><a>Product D</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>   
+				</form>		
+          </div>    
+		  
+		
+		  </div>     
+
+<div id="maximfooter"></div>
+    
+  </body>
+</html>
+

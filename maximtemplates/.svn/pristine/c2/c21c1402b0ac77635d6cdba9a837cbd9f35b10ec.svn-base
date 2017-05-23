@@ -1,0 +1,62 @@
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+<link href="../css/custom.css" rel="stylesheet">
+ <!-- Custom styles for this template -->
+    <link href="../css/navbar-fixed-top.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet" />
+<script>
+        $(document).ready(function (e) {
+             var url = document.URL.toString();
+             var arr = url.split("/");
+            
+             if (arr != null && arr.length > 3) {            
+                 var idString = arr[arr.length - 1].replace(".html", "");                 
+                $(".navLi").removeClass("active");
+                $("#" + idString).addClass("active");
+            }
+        });
+    </script>
+ <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <img src="../img/logo-maxim-integrated.png"   class="img-responsive navbar-header-img" alt="Image">
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">    
+          <ul class="nav navbar-nav">
+            <li class="navLi active" id="index"><a href="index.html">Home</a></li>
+            <li class="navLi" id="menu1"><a href="menu1.html">Menu1</a></li>
+            <li class="navLi" id="menu2"><a href="menu2.html">Menu2</a></li>			
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Controls <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="navLi" id="form-controls"><a href="form-controls.html">Form-Controls</a></li>
+                <li><a href="gridcontrol.html">Grid Control</a></li>
+                <li><a href="listcontrol.html">List Control</a></li>
+                <li><a href="treecontrol.html">Tree Control</a></li>
+                <li class="divider"></li>               
+                <li><a href="#">Menuitem1</a></li>
+                <li><a href="#">Menuitem1</a></li>
+              </ul>
+            </li>
+          </ul>
+			<ul style="" class="rightMenu nav navbar-nav">                 
+                <!--<li data-toggle="collapse" data-target=".navbar-collapse" style="" class=""><a id="loginLink" href="#" title="Log in using SSO">hi</a></li>-->
+                <li data-toggle="collapse" data-target=".navbar-collapse">
+					<div><label ID="lblUser" class="label" style="line-height:2.15;color:#ffffff">welcome user<label></div>
+						</li>
+						<li data-toggle="collapse" data-target=".navbar-collapse" style="" class="">                   
+							<a style="display:block" id="logoutLink" href="frmLogOut.aspx" title="Log Out">Log Out</a>                   				
+						</li>
+						
+					</ul> 
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>

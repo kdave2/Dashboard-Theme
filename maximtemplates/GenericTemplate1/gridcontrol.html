@@ -1,0 +1,192 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxim Template</title>
+<script src="../js/jquery-1.11.1.min.js"></script> 
+	 <script src="../js/datatable/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/datatable/ColVis/js/dataTables.colVis.min.js" type="text/javascript"></script>
+
+<script src="../js/datatable/dataTables.responsive.js" type="text/javascript"></script>
+
+<script src="../js/datatable/dataTables.bootstrap.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="../js/datatable/ColVis/css/dataTables.colVis.css" />
+<link rel="stylesheet" type="text/css"
+	href="../css/datatable/dataTables.responsive.css" />
+<link rel="stylesheet" type="text/css"
+	href="../css/datatable/dataTables.bootstrap.css" />
+<link rel="stylesheet"
+	href="../css/datatable/demo_table.css" />
+<link rel="stylesheet" 
+	href="../css/datatable/demo_table_jui.css" />
+	
+	
+<link rel="stylesheet"
+	href="../css/datatable/themes/smoothness/jquery-ui-1.8.4.custom.css" />
+
+<script src="../js/datatable/jquery.bootstrap.datatables.js" type="text/javascript"></script>
+
+<script src="../js/datatable/datatableUI.js" type="text/javascript"></script>
+<script src="../js/datatable/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
+<script src="../js/datatable/FixedColumns.js" type="text/javascript"></script>
+
+ <script src="../js/bootstrap.min.js"></script>
+    <script> 
+    $(function(){
+      $("#maximheader").load("header.html"); 
+      $("#maximfooter").load("footer.html"); 
+    });
+	 $(document).ready(function() {
+	 
+		var adataTable = $('#data').dataTable({
+   				"bSortClasses": true,
+				 "bPaginate": true,
+	    		"bJQueryUI": true,
+	    		"pagingType": "full_numbers",
+	    		"deferRender": true,
+	    		"ordering": true,
+				responsive: true,
+	    		"aoColumnDefs": [
+	    		               {	
+		    		               
+	    		               }
+	    		             ],
+	    		"lengthMenu": [ 10, 50, 75, 100 ],
+	    		dom: 'C<"clear"><"fg-toolbar ui-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix"l<"#buttonPlaceholder">fr>t<"fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix"ip>',
+	            colVis: {
+	                activate: "click",
+	                "bRestore": true,
+	                "sAlign": "left"
+	            }
+	    	});
+			
+			$('input.column_filter').on( 'keyup click', function () {
+		        filterColumn( $(this).attr('indexValue'), $(this).val());
+		});
+	    function filterColumn ( i,val1 ) {
+			    $('#data').DataTable().column( i).search(val1).draw();
+		}
+		
+	 });
+	 
+    </script> 
+  
+  </head>
+  <body>
+
+<div id="maximheader"></div>
+
+
+<div class="container-fluid">
+<div class="row">
+	<div class="span12"></div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" display: table;table-layout: fixed;">
+        <table cclass="table table-striped table-hover dt-responsive" cellspacing="0" id="data"  width="100%">
+		       				 <thead>
+		       				 	<tr>
+						                <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="1" indexValue="0" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="2" indexValue="1" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="3" indexValue="2" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="4" indexValue="3" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="5" indexValue="4" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="6" indexValue="5" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="7" indexValue="6" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="8" indexValue="7" class="column_filter" placeholder="ALL"/></th>
+					                    <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="9" indexValue="8" class="column_filter" placeholder="ALL"/></th>
+					                     <th align="left" style="" class="tableWidth"><input style="max-width:100px" type="text" data-column="9" indexValue="8" class="column_filter" placeholder="ALL"/></th>
+					                    
+					                </tr>
+				                 <tr>
+				                    <th class="tableWidth all">Mfg. Site Name</th>
+				                    <th class="tableWidth min-phone-l">Fab Lot #</th>
+				                    <th class="tableWidth min-tablet">Wafer Size</th>
+				                    <th class="tableWidth min-tablet">Process Family</th>
+				                    <th class="tableWidth min-tablet">Process Technology</th>
+				                    <th class="tableWidth desktop">Production Area</th>
+				                    <th class="tableWidth desktop">Process Stage</th>
+				                    <th class="tableWidth desktop">Mfg Area</th>
+				                    <th class="tableWidth desktop">Lot Type Code</th>
+				                    <th class="tableWidth none">Lot Type Description</th>
+				                    	                    
+				                </tr>
+				                </thead>
+				                 <tbody id="t_rows">
+				                 	<tr>
+									<td >D24972.2</td><td>TNR</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>1</td><td>SAW_MEMS_PARTIAL</td><td><div style="width:100%;background:#70FFE4;">16385.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">T1</div></td><td>2013-08-20</td><td><div style="width:100%;background:pink;color:red">(667.2)</div></td>
+									</tr>
+									
+									<tr>
+									<td >D25059.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>17</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13963.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-08-29</td><td><div style="width:100%;background:pink;color:red">(658.2)</div></td>
+									</tr>
+									
+									<tr>
+									<td >D25211.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>1</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13963.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-03</td><td><div style="width:100%;background:pink;color:red">(653.2)</div></td>
+									</tr>
+									
+									<tr>
+									<td >D25300.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>9</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13816.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-06</td><td><div style="width:100%;background:pink;color:red">(650.2)</div></td>
+									</tr>
+									
+									<tr  >
+									<td >D25336.1</td><td>INSPECT</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>4</td><td>Rel_MEMS_Sen_2</td><td><div style="width:100%;background:#70FFE4;">14968.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-08-30</td><td><div style="width:100%;background:pink;color:red">(657.2)</div></td>
+									</tr>
+									
+									<tr>
+									<td >D25337.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>23</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13961.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-06</td><td><div style="width:100%;background:pink;color:red">(650.2)</div></td>
+									</tr>
+
+									<tr  >
+									<td >D25846.5</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>1</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">3946.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-19</td><td><div style="width:100%;background:pink;color:red">(637.2)</div></td></tr><tr  class="even"><td >D26009.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>22</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">3946.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-24</td><td><div style="width:100%;background:pink;color:red">(632.2)</div></td>
+									</tr>
+
+									<tr  >
+									<td >D26011.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>2</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13435.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-24</td><td><div style="width:100%;background:pink;color:red">(632.2)</div></td></tr><tr  class="even"><td >D26039.1</td><td>INSPECT</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>1</td><td>Rel_MEMS_Sen_2</td><td><div style="width:100%;background:#70FFE4;">14968.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-17</td><td><div style="width:100%;background:pink;color:red">(639.2)</div></td>
+									</tr>
+									<tr>
+									<td >D26053.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>1</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13960.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-25</td><td><div style="width:100%;background:pink;color:red">(631.2)</div></td>
+									</tr>
+
+									<tr  >
+									<td >D26106.1</td><td>INSPECT</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>9</td><td>Rel_MEMS_Sen_2</td><td><div style="width:100%;background:#70FFE4;">14968.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-18</td><td><div style="width:100%;background:pink;color:red">(638.2)</div></td>
+									</tr>
+									<tr>
+									
+									<td >D26108.1</td><td>AVI</td><td><div style="width:100%;background:#FCF176;">PX</div></td><td>3</td><td>12</td><td>MEMS_AVI</td><td><div style="width:100%;background:#70FFE4;">13960.0</div></td><td><div style="width:100%;background:rgb(255, 73, 73);color:white">B1</div></td><td>2013-09-10</td><td><div style="width:100%;background:pink;color:red">(646.2)</div></td>
+									
+									</tr>
+								</tbody>
+									<tfoot style="display:none">
+								        <tr>
+								            <th class="tableWidth text-nowrap">ALL</th>
+											<th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								            <th class="tableWidth text-nowrap">ALL</th>
+								           
+								        </tr>
+							        </tfoot>
+				               
+		       			</table>	
+    </div>
+</div>
+  
+</div>
+<div id="maximfooter"></div>
+  
+
+    
+  </body>
+</html>
+
+  
